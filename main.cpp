@@ -18,5 +18,21 @@ int main(){
   }
    cout<<i<<" "; //can use endl also to give the space
  }
+
+ //switch case 
+ int i ;
+ cout<<"enter value of i (1 or 2)"<<" ";
+ cin>>i;
+ switch(i){
+  case 1: 
+        cout<<"Yes"<<" ";
+        break;
+  case 2:
+      cout<<"No"<<" ";
+       break;
+  default :
+      cout<<"None"<<" ";
+      break;
+ }
 return 0;
 }
