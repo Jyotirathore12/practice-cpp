@@ -34,5 +34,12 @@ int main(){
       cout<<"None"<<" ";
       break;
  }
+
+
+ /* function */
+ void print(){
+  cout<<"what's in your mind ?"<<endl;
+  cout<<"here's is my day in my life"<<endl;
+ }
 return 0;
 }
