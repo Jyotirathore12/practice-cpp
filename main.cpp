@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>   // New Feature: sort()
+#include <algorithm>   
+#include <numeric>     // for accumulate
 using namespace std;
 
 void print();
@@ -38,10 +39,25 @@ int main() {
 
     print();
 
-    // New Feature: STL vector + sorting
+    // STL vector + sorting
     vector<int> numbers = {50, 10, 40, 20, 30};
-    sort(numbers.begin(), numbers.end());  // sorting feature
+    sort(numbers.begin(), numbers.end());
     displayVector(numbers);
+
+    // 🔥 New Feature: Lambda Function
+    cout << "Even numbers: ";
+    for_each(numbers.begin(), numbers.end(), [](int num) {
+        if (num % 2 == 0)
+            cout << num << " ";
+    });
+    cout << endl;
+
+    // Using lambda with count_if
+    int evenCount = count_if(numbers.begin(), numbers.end(), [](int num) {
+        return num % 2 == 0;
+    });
+
+    cout << "Count of even numbers: " << evenCount << endl;
 
     return 0;
 }
